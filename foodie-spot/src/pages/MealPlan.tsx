@@ -14,9 +14,9 @@ interface Meal {
 const MealPlanContainer = styled.div`
   padding: 2rem;
   text-align: center;
-  background-color: #1f1f1f; /* Dark background */
-  color: #f1f1f1; /* Light text color */
-  width: 60%;
+  background-color: #1f1f1f; 
+  color: #f1f1f1; 
+  width: 70%;
   margin: auto;
 
   @media (max-width: 768px) {
@@ -25,7 +25,7 @@ const MealPlanContainer = styled.div`
 `;
 
 const MealCard = styled.div`
-  background-color: #2c2f36; /* Dark background for meal card */
+  background-color: #2c2f36;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   padding: 1rem;
@@ -48,7 +48,7 @@ const MealCard = styled.div`
 `;
 
 const MealImage = styled.img`
-  max-width: 70%;
+  width: 7.5em;
   height: auto;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -60,25 +60,25 @@ const MealImage = styled.img`
 
 const MealTitle = styled.h3`
   color: #f8a04b; /* Orange color */
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-`;
-
-const MealDetails = styled.p`
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
 
   @media (max-width: 768px) {
     font-size: 0.8rem;
   }
 `;
 
+const MealDetails = styled.p`
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.6rem;
+  }
+`;
+
 const MealLink = styled.a`
-  color: #f8a04b; /* Orange color */
+  color: #f8a04b; 
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -90,7 +90,7 @@ const MealLink = styled.a`
 
 const LoadingText = styled.p`
   font-size: 1.2rem;
-  color: #f8a04b; /* Orange color */
+  color: #f8a04b; 
 
   @media (max-width: 768px) {
     font-size: 1rem;
