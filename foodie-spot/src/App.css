@@ -1,0 +1,26 @@
+.meal-plan, .restaurants {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.meal-card, .restaurant-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.meal-card h3, .restaurant-card h3 {
+  margin-top: 0;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
