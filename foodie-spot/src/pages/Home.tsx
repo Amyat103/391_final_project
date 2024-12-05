@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const Home: React.FC = () => {
   return (
     <div>
       <h1>Welcome to Foodie Spot</h1>
-      <p>Your guide to finding the best eats around BU!</p>
+      <p>Find delicious meal plans and restaurants around you!</p>
     </div>
   );
 };
