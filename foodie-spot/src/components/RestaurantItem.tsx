@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Rating from '@mui/material/Rating';
+
 interface Restaurant {
   restaurantName: string;
   foodType: string;
@@ -29,7 +31,7 @@ const RestaurantItem = ({
       <p>{foodType}</p>
       <p>{location}</p>
       <p>{hours}</p>
-      <p>{rating}</p>
+      <Rating value={rating} />
     </RestaurantContainer>
   );
 };
