@@ -31,7 +31,7 @@ const RestaurantItem = ({
       <p>{foodType}</p>
       <p>{location}</p>
       <p>{hours}</p>
-      <Rating value={rating} />
+      <Rating value={rating} precision={0.5} />
     </RestaurantContainer>
   );
 };
