@@ -18,6 +18,32 @@ const RestaurantContainer = styled.div`
   margin: 1rem;
 `;
 
+const RestaurantName = styled.h2`
+  color: #2c3e50; /* Dark blue */
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+`;
+
+const FoodType = styled.p`
+  color: #3498db; /* Light blue */
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  font-weight: 400;
+`;
+
+const LocationText = styled.p`
+  color: #7f8c8d; /* Light grey */
+  font-size: 1rem;
+  margin: 0.5rem 0;
+`;
+
+const HoursText = styled.p`
+  color: #7f8c8d; /* Light grey */
+  font-size: 1rem;
+  margin: 0.5rem 0;
+`;
+
 const RestaurantItem = ({
   restaurantName,
   foodType,
@@ -27,11 +53,11 @@ const RestaurantItem = ({
 }: Restaurant) => {
   return (
     <RestaurantContainer>
-      <h2>{restaurantName}</h2>
-      <p>{foodType}</p>
-      <p>{location}</p>
-      <p>{hours}</p>
-      <Rating value={rating} precision={0.5} />
+      <RestaurantName>{restaurantName}</RestaurantName>
+      <FoodType>{foodType}</FoodType>
+      <LocationText>{location}</LocationText>
+      <HoursText>{hours}</HoursText>
+      <Rating value={rating} precision={0.5} color='gold' readOnly />
     </RestaurantContainer>
   );
 };
