@@ -1,5 +1,4 @@
 export interface Restaurant {
-  id: string;
   restaurantName: string;
   foodType: string;
   location: string;
@@ -9,7 +8,6 @@ export interface Restaurant {
 
 export const restaurantData: Restaurant[] = [
   {
-    id: '1',
     restaurantName: 'Nud Pod Thai Cuisine',
     foodType: 'Thai',
     location: '738 Commonwealth Ave, Boston',

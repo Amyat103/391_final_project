@@ -2,14 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Rating from '@mui/material/Rating';
-
-export interface Restaurant {
-  restaurantName: string;
-  foodType: string;
-  location: string;
-  hours: string;
-  rating: number;
-}
+import { Restaurant } from '../data/restaurantData';
 
 const RestaurantContainer = styled.div`
   background-color: grey;
@@ -57,7 +50,7 @@ const RestaurantItem = ({
       <FoodType>{foodType}</FoodType>
       <LocationText>{location}</LocationText>
       <HoursText>{hours}</HoursText>
-      <Rating value={rating} precision={0.5} color='gold' readOnly />
+      <Rating value={rating} precision={0.5} readOnly />
     </RestaurantContainer>
   );
 };
