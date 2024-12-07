@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import MealPlan from "./pages/MealPlan";
-import Restaurants from "./pages/Restaurants";
+import RestaurantPage from "./pages/RestaurantPage";
 import Navbar from "./components/Navbar"; //
 import GlobalStyle from './components/GlobalStyle'; // Import GlobalStyle
 
@@ -14,7 +14,7 @@ function Root() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/meal-plan" element={<MealPlan />} />
-        <Route path="/restaurants" element={<Restaurants />} />
+        <Route path="/restaurants" element={<RestaurantPage />} />
       </Routes>
     </div>
   );

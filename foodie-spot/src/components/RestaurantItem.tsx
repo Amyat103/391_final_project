@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Rating from '@mui/material/Rating';
 
-interface Restaurant {
+export interface Restaurant {
   restaurantName: string;
   foodType: string;
   location: string;
