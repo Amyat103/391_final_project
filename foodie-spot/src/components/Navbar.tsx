@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 // Styled components for the navbar
 const Nav = styled.nav`
@@ -34,7 +33,7 @@ const NavLink = styled(Link)`
   }
 `;
 
-const Navbar: React.FC = () => {
+export default function Navbar() {
   return (
     <Nav>
       <NavList>
@@ -50,6 +49,4 @@ const Navbar: React.FC = () => {
       </NavList>
     </Nav>
   );
-};
-
-export default Navbar;
+}

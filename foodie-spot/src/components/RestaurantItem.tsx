@@ -1,8 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-
-import Rating from '@mui/material/Rating';
-import { Restaurant } from '../data/restaurantData';
+import styled from "styled-components";
+import Rating from "@mui/material/Rating";
+import { Restaurant } from "./types";
 
 const RestaurantContainer = styled.div`
   background-color: #2c2f36;
@@ -38,13 +36,13 @@ const HoursText = styled.p`
   margin: 0.5rem 0;
 `;
 
-const RestaurantItem = ({
+export default function RestaurantItem({
   restaurantName,
   foodType,
   location,
   hours,
   rating,
-}: Restaurant) => {
+}: Restaurant) {
   return (
     <RestaurantContainer>
       <RestaurantName>{restaurantName}</RestaurantName>
@@ -54,6 +52,4 @@ const RestaurantItem = ({
       <Rating value={rating} precision={0.5} readOnly />
     </RestaurantContainer>
   );
-};
-
-export default RestaurantItem;
+}
