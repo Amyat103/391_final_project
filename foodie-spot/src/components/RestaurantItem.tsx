@@ -5,34 +5,35 @@ import Rating from '@mui/material/Rating';
 import { Restaurant } from '../data/restaurantData';
 
 const RestaurantContainer = styled.div`
-  background-color: grey;
+  background-color: #2c2f36;
   border-radius: 10px;
   padding: 1.5rem;
+  width: 300px;
   margin: 1rem;
 `;
 
 const RestaurantName = styled.h2`
-  color: #2c3e50; /* Dark blue */
+  color: #f8a04b; /* Orange */
   font-size: 1.5rem;
   margin: 0.5rem 0;
   font-weight: bold;
 `;
 
 const FoodType = styled.p`
-  color: #3498db; /* Light blue */
+  color: white;
   font-size: 1rem;
   margin: 0.5rem 0;
   font-weight: 400;
 `;
 
 const LocationText = styled.p`
-  color: #7f8c8d; /* Light grey */
+  color: #b4b4b4; /* Light grey */
   font-size: 1rem;
   margin: 0.5rem 0;
 `;
 
 const HoursText = styled.p`
-  color: #7f8c8d; /* Light grey */
+  color: #b4b4b4; /* Light grey */
   font-size: 1rem;
   margin: 0.5rem 0;
 `;
