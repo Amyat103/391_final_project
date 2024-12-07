@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 interface Meal {
@@ -14,8 +14,8 @@ interface Meal {
 const MealPlanContainer = styled.div`
   padding: 2rem;
   text-align: center;
-  background-color: #1f1f1f; 
-  color: #f1f1f1; 
+  background-color: #1f1f1f;
+  color: #f1f1f1;
   width: 70%;
   margin: auto;
 
@@ -78,7 +78,7 @@ const MealDetails = styled.p`
 `;
 
 const MealLink = styled.a`
-  color: #f8a04b; 
+  color: #f8a04b;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
@@ -90,7 +90,7 @@ const MealLink = styled.a`
 
 const LoadingText = styled.p`
   font-size: 1.2rem;
-  color: #f8a04b; 
+  color: #f8a04b;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -106,7 +106,7 @@ const ErrorText = styled.p`
   }
 `;
 
-const MealPlan: React.FC = () => {
+export default function MealPlan() {
   const [meals, setMeals] = useState<Meal[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -154,9 +154,14 @@ const MealPlan: React.FC = () => {
             />
             <MealTitle>{meal.title}</MealTitle>
             <MealDetails>
-              Ready in: {meal.readyInMinutes} minutes | Servings: {meal.servings}
+              Ready in: {meal.readyInMinutes} minutes | Servings:{" "}
+              {meal.servings}
             </MealDetails>
-            <MealLink href={meal.sourceUrl} target="_blank" rel="noopener noreferrer">
+            <MealLink
+              href={meal.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               View Recipe
             </MealLink>
           </MealCard>
@@ -164,6 +169,4 @@ const MealPlan: React.FC = () => {
       </div>
     </MealPlanContainer>
   );
-};
-
-export default MealPlan;
+}
