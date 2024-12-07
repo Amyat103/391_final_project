@@ -1,10 +1,15 @@
-import React from "react";
-import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
+// import React from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Routes,
+  Route,
+} from "react-router-dom";
 import Home from "./pages/Home";
 import MealPlan from "./pages/MealPlan";
 import Restaurants from "./pages/Restaurants";
 import Navbar from "./components/Navbar"; //
-import GlobalStyle from './components/GlobalStyle'; // Import GlobalStyle
+import GlobalStyle from "./components/GlobalStyle"; // Import GlobalStyle
 
 function Root() {
   return (
@@ -20,9 +25,7 @@ function Root() {
   );
 }
 
-const router = createBrowserRouter([
-  { path: "*", Component: Root }
-]);
+const router = createBrowserRouter([{ path: "*", Component: Root }]);
 
 export default function App() {
   return (
