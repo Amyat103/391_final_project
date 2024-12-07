@@ -1,4 +1,3 @@
-// import React from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -8,14 +7,14 @@ import {
 import Home from "./pages/Home";
 import MealPlan from "./pages/MealPlan";
 import Restaurants from "./pages/Restaurants";
-import Navbar from "./components/Navbar"; //
-import GlobalStyle from "./components/GlobalStyle"; // Import GlobalStyle
+import Navbar from "./components/Navbar";
+import GlobalStyle from "./components/GlobalStyle";
 
 function Root() {
   return (
     <div>
-      <GlobalStyle /> {/* Apply global styles */}
-      <Navbar /> {/* Add Navbar here */}
+      <GlobalStyle />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/meal-plan" element={<MealPlan />} />

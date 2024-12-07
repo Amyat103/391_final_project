@@ -1,7 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import Rating from '@mui/material/Rating';
+import Rating from "@mui/material/Rating";
 
 interface Restaurant {
   restaurantName: string;
@@ -44,22 +43,20 @@ const HoursText = styled.p`
   margin: 0.5rem 0;
 `;
 
-const RestaurantItem = ({
+export default function RestaurantItem({
   restaurantName,
   foodType,
   location,
   hours,
   rating,
-}: Restaurant) => {
+}: Restaurant) {
   return (
     <RestaurantContainer>
       <RestaurantName>{restaurantName}</RestaurantName>
       <FoodType>{foodType}</FoodType>
       <LocationText>{location}</LocationText>
       <HoursText>{hours}</HoursText>
-      <Rating value={rating} precision={0.5} color='gold' readOnly />
+      <Rating value={rating} precision={0.5} readOnly />
     </RestaurantContainer>
   );
-};
-
-export default RestaurantItem;
+}
