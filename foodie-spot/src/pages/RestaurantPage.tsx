@@ -1,4 +1,4 @@
-import RestaurantsandItems from "../components/RestaurantsAndItems";
+import RestaurantsandItems from '../components/RestaurantsAndItems';
 
 const currentRestaurants = [
   {
@@ -60,12 +60,10 @@ const currentRestaurants = [
 ];
 
 export default function Restaurants() {
-    return (
-      <div>
-        <h1>Restaurants Page</h1>
-        <RestaurantsandItems
-        restaurants = {currentRestaurants}
-        />
-      </div>
-    );
-  }
+  return (
+    <div>
+      <h1>Restaurants Page</h1>
+      <RestaurantsandItems restaurants={currentRestaurants} />
+    </div>
+  );
+}
