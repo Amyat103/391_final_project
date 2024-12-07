@@ -1,7 +1,11 @@
-import styled from "styled-components";
-import Rating from "@mui/material/Rating";
-import { Restaurant } from "./types";
+// RestaurantItem component: Arkar Myat (David)
+// This is to render each item component for the restaurant page to use
+// used Rating component in Material UI for the star
+import styled from 'styled-components';
+import Rating from '@mui/material/Rating';
+import { Restaurant } from './types';
 
+// styled components for container, name, food type, location, hours
 const RestaurantContainer = styled.div`
   background-color: #2c2f36;
   border-radius: 10px;
@@ -36,6 +40,7 @@ const HoursText = styled.p`
   margin: 0.5rem 0;
 `;
 
+// RestaurantItem component
 export default function RestaurantItem({
   restaurantName,
   foodType,
