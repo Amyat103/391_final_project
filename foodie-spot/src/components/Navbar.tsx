@@ -1,5 +1,11 @@
+//  Navbar Component: by Truc Duong
+// This component is responsible for rendering the navigation bar on every page. 
+// I used React Router for routing and "styled-components" to add CSS styling.
+
+
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+
 
 // Styled components for the navbar
 const Nav = styled.nav`
@@ -33,6 +39,9 @@ const NavLink = styled(Link)`
   }
 `;
 
+// Navbar Component
+// This component displays navigation links for Home, Meal Plan, and Restaurants.
+// I used `Link` to enable client-side routing without full page reloads
 export default function Navbar() {
   return (
     <Nav>

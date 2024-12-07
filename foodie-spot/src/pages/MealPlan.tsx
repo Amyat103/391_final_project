@@ -1,6 +1,13 @@
+// MealPlan Component: by Truc Duong
+// I used this component to render the meal plan page for the web application.
+// I used useEffect hook to fetch a daily meal plan from the Spoonacular API. 
+// I used useState to control loading, error, and data states.
+
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
+
+// Define the TypeScript interface for the Meal object
 interface Meal {
   id: number;
   title: string;
@@ -24,6 +31,7 @@ const MealPlanContainer = styled.div`
   }
 `;
 
+// `MealCard` represents an individual meal with a responsive card layout and hover effects.
 const MealCard = styled.div`
   background-color: #2c2f36;
   border-radius: 10px;
@@ -88,6 +96,7 @@ const MealLink = styled.a`
   }
 `;
 
+// `LoadingText` is used while data is being fetched.
 const LoadingText = styled.p`
   font-size: 1.2rem;
   color: #f8a04b;
@@ -107,13 +116,13 @@ const ErrorText = styled.p`
 `;
 
 export default function MealPlan() {
-  const [meals, setMeals] = useState<Meal[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const [meals, setMeals] = useState<Meal[]>([]); // State for storing meal data
+  const [loading, setLoading] = useState<boolean>(true); // State to track loading status
+  const [error, setError] = useState<string | null>(null); // State to store error messages
 
   useEffect(() => {
     const fetchMealPlan = async () => {
-      const apiKey = import.meta.env.VITE_TRUC_SPOONACULAR_API_KEY;
+      const apiKey = import.meta.env.VITE_TRUC_SPOONACULAR_API_KEY; // Get API key from environment variables
       if (!apiKey) {
         setError("API key not found. Please check your environment variables.");
         setLoading(false);
@@ -136,8 +145,8 @@ export default function MealPlan() {
       }
     };
 
-    fetchMealPlan();
-  }, []);
+    fetchMealPlan(); // call the function
+  }, []);  // Empty dependency array ensures this runs only once
 
   if (loading) return <LoadingText>Loading...</LoadingText>;
   if (error) return <ErrorText>Error: {error}</ErrorText>;
