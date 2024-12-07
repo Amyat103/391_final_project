@@ -1,6 +1,6 @@
-import RestaurantItem from "./RestaurantItem";
-import styled from "styled-components";
-import { Restaurant } from "./types";
+import RestaurantItem from './RestaurantItem';
+import styled from 'styled-components';
+import { Restaurant } from './types';
 
 interface RestaurantsList {
   restaurants: Restaurant[];
@@ -22,6 +22,7 @@ export default function RestaurantItems({ restaurants }: RestaurantsList) {
           location={restaurant.location}
           hours={restaurant.hours}
           rating={restaurant.rating}
+          image={restaurant.image}
         />
       ))}
     </RestaurantsContainer>

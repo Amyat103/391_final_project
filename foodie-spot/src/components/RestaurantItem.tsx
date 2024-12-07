@@ -5,13 +5,27 @@ import styled from 'styled-components';
 import Rating from '@mui/material/Rating';
 import { Restaurant } from './types';
 
-// styled components for container, name, food type, location, hours
+// styled components for container, name, food type, location, hours, and image
 const RestaurantContainer = styled.div`
   background-color: #2c2f36;
   border-radius: 10px;
   padding: 1.5rem;
   width: 300px;
   margin: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  }
+`;
+
+const RestaurantImage = styled.img`
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 `;
 
 const RestaurantName = styled.h2`
@@ -47,9 +61,12 @@ export default function RestaurantItem({
   location,
   hours,
   rating,
+  image,
 }: Restaurant) {
+  console.log(image);
   return (
     <RestaurantContainer>
+      <RestaurantImage src={image} alt={restaurantName} />
       <RestaurantName>{restaurantName}</RestaurantName>
       <FoodType>{foodType}</FoodType>
       <LocationText>{location}</LocationText>
