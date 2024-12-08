@@ -54,7 +54,9 @@ const HoursText = styled.p`
   margin: 0.5rem 0;
 `;
 
-// RestaurantItem component
+// RestaurantItem component takes in restaurantName, foodType, location, hours, rating, and image
+// renders each of them using the styled components
+// This component is for Restaurant page to render the info
 export default function RestaurantItem({
   restaurantName,
   foodType,
