@@ -63,7 +63,7 @@ export default function RestaurantItem({
   rating,
   image,
 }: Restaurant) {
-  console.log(image);
+  // console.log(image);
   return (
     <RestaurantContainer>
       <RestaurantImage src={image} alt={restaurantName} />
@@ -72,6 +72,7 @@ export default function RestaurantItem({
       <LocationText>{location}</LocationText>
       <HoursText>{hours}</HoursText>
       <Rating value={rating} precision={0.5} readOnly />
+      <p style={{ display: 'inline' }}>Rating: {rating}/5</p>
     </RestaurantContainer>
   );
 }
