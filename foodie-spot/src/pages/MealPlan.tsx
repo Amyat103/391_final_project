@@ -3,8 +3,8 @@
 // I used useEffect hook to fetch a daily meal plan from the Spoonacular API.
 // I used useState to control loading, error, and data states.
 
-import { useEffect, useState } from "react";
-import styled from "styled-components";
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 // Define the TypeScript interface for the Meal object
 interface Meal {
@@ -121,7 +121,7 @@ export default function MealPlan() {
 
   useEffect(() => {
     const fetchMealPlan = async () => {
-      const apiKey = process.env.VITE_TRUC_SPOONACULAR_API_KEY; // Get API key from environment variables
+      const apiKey = import.meta.env.VITE_TRUC_SPOONACULAR_API_KEY; // Get API key from environment variables
       if (!apiKey) {
         setError('API key not found. Please check your environment variables.');
         setLoading(false);
