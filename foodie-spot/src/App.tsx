@@ -1,4 +1,5 @@
 // Edit for routing and Navbar component By: Truc Duong
+// Creates a router which will be used for navigation between different paths. This was based off of lecture slides on routing and creating a navbar.
 import React from "react";
 import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
