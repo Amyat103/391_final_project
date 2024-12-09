@@ -1,6 +1,10 @@
+// Home component by Ayan Patel
+// This is the main page that the user lands on when they first open the site
+
 import BUPhoto from "../images/BUPhoto.png";
 import styled from "styled-components";
 
+// styled components
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -19,6 +23,8 @@ const Image = styled.img`
   margin: 1rem 0;
 `;
 
+// Exporting the home component with a welcome title, an image of BU campus, and a description of
+// how to use the site
 export default function Home() {
   return (
     <Container>
