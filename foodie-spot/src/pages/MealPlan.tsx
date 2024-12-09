@@ -1,11 +1,10 @@
 // MealPlan Component: by Truc Duong
 // I used this component to render the meal plan page for the web application.
-// I used useEffect hook to fetch a daily meal plan from the Spoonacular API. 
+// I used useEffect hook to fetch a daily meal plan from the Spoonacular API.
 // I used useState to control loading, error, and data states.
 
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-
 
 // Define the TypeScript interface for the Meal object
 interface Meal {
@@ -146,7 +145,7 @@ export default function MealPlan() {
     };
 
     fetchMealPlan(); // call the function
-  }, []);  // Empty dependency array ensures this runs only once
+  }, []); // Empty dependency array ensures this runs only once
 
   if (loading) return <LoadingText>Loading...</LoadingText>;
   if (error) return <ErrorText>Error: {error}</ErrorText>;
