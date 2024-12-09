@@ -15,6 +15,8 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3 {
     color: #f8a04b; /* Orange headers */
+    text-align: center;
+
   }
 
   a {
