@@ -3,8 +3,8 @@
 // I used useEffect hook to fetch a daily meal plan from the Spoonacular API.
 // I used useState to control loading, error, and data states.
 
-import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 
 // Define the TypeScript interface for the Meal object
 interface Meal {
