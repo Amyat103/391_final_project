@@ -1,3 +1,4 @@
+// Edit for routing and Navbar component By: Truc Duong
 import React from "react";
 import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
