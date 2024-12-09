@@ -1,8 +1,37 @@
+import BUPhoto from "../images/BUPhoto.png";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
+
+const StyledText = styled.p`
+  max-width: 50%;
+`;
+
+const Image = styled.img`
+  width: 50%;
+  max-width: 50vw;
+  height: auto;
+  margin: 1rem 0;
+`;
+
 export default function Home() {
   return (
-    <div>
+    <Container>
       <h1>Welcome to Foodie Spot</h1>
-      <p>Find delicious meal plans and restaurants around you!</p>
-    </div>
+      <Image src={BUPhoto} alt="BU Campus" />
+      <StyledText>
+        Find delicious meal plans and restaurants around you! This website is
+        made for Boston University Students to discover new meals to eat. Check
+        the Meal Plan page for new recipes to make that you may not have know
+        about. If you would like to eat out instead, check out the Restaurant
+        page where you will see restaurants on and around Boston University
+        campus. Hope you find something to eat!
+      </StyledText>
+    </Container>
   );
 }
