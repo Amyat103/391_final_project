@@ -1,4 +1,4 @@
-// RestaurantPage Component by Ayan Patel
+// RestaurantPage Component by Sean Lin
 // This component is for the page that displays all of the different restaurants around BU campus
 
 import RestaurantsandItems from "../components/RestaurantsAndItems";
@@ -17,6 +17,7 @@ import shudaxiaImage from "../images/shudaxia.png";
 // This includes information for all the restaurants on the page
 // Information includes the name, what style of food, where the
 // restaurant is located, its hours, rating, and a image
+// I added some restaurants and Ayan added some more restaurants to the list.
 const currentRestaurants = [
   {
     restaurantName: "Nudpob",
