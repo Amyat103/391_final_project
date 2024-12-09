@@ -1,3 +1,4 @@
+// Interface used by restaurant item components
 export interface Restaurant {
   restaurantName: string;
   foodType: string;

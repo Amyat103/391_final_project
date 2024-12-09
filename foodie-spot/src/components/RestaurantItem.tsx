@@ -65,7 +65,6 @@ export default function RestaurantItem({
   rating,
   image,
 }: Restaurant) {
-  // console.log(image);
   return (
     <RestaurantContainer>
       <RestaurantImage src={image} alt={restaurantName} />

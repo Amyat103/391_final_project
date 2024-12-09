@@ -121,9 +121,9 @@ export default function MealPlan() {
 
   useEffect(() => {
     const fetchMealPlan = async () => {
-      const apiKey = import.meta.env.VITE_TRUC_SPOONACULAR_API_KEY; // Get API key from environment variables
+      const apiKey = process.env.VITE_TRUC_SPOONACULAR_API_KEY; // Get API key from environment variables
       if (!apiKey) {
-        setError("API key not found. Please check your environment variables.");
+        setError('API key not found. Please check your environment variables.');
         setLoading(false);
         return;
       }
@@ -133,12 +133,12 @@ export default function MealPlan() {
           `https://api.spoonacular.com/mealplanner/generate?timeFrame=day&apiKey=${apiKey}`
         );
         if (!response.ok) {
-          throw new Error("Failed to fetch meal plan.");
+          throw new Error('Failed to fetch meal plan.');
         }
         const data = await response.json();
         setMeals(data.meals);
       } catch (err) {
-        setError(err instanceof Error ? err.message : "An error occurred");
+        setError(err instanceof Error ? err.message : 'An error occurred');
       } finally {
         setLoading(false);
       }
@@ -153,7 +153,7 @@ export default function MealPlan() {
   return (
     <MealPlanContainer>
       <h2>Today's Meal Plan</h2>
-      <div className="meal-plan">
+      <div className='meal-plan'>
         {meals.map((meal) => (
           <MealCard key={meal.id}>
             <MealImage
@@ -162,13 +162,13 @@ export default function MealPlan() {
             />
             <MealTitle>{meal.title}</MealTitle>
             <MealDetails>
-              Ready in: {meal.readyInMinutes} minutes | Servings:{" "}
+              Ready in: {meal.readyInMinutes} minutes | Servings:{' '}
               {meal.servings}
             </MealDetails>
             <MealLink
               href={meal.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              target='_blank'
+              rel='noopener noreferrer'
             >
               View Recipe
             </MealLink>
